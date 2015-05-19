@@ -37,7 +37,7 @@ Output:
 """
 import random
 
-def answer1(x):
+def answerLisMaxEquals(x):
     minIndex = x.index(min(x))
     currentMaxIndex = x.index(max(x))
     while currentMaxIndex!= minIndex:
@@ -56,4 +56,4 @@ if __name__ == '__main__':
 
     print 'Input: cars= %s' % str(cars)
     print 'Max equals = %s' % str(answer(cars))
-    print "List of max equals" , str(answer1(cars))
+    print "List of max equals" , str(answerLisMaxEquals(cars))
