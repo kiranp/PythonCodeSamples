@@ -45,17 +45,9 @@ def answer1(x):
         x[x.index(min(x))] = x[x.index(min(x))]+1
         x[x.index(max(x))] = x[x.index(max(x))]-1
         minIndex = x.index(min(x))
-    #print "Rearranged list: ", x
     return x
-    #dictOfEquals = {i:x.count(i) for i in x}
-    #maxEqualIndex =  max(dictOfEquals, key=dictOfEquals.get)
-    #maxEquals = dictOfEquals[maxEqualIndex]
-    #print "MaxEquals:", maxEquals
-    #return maxEquals
 
 def answer(x):
-    #print sum(x)
-    #print len(x)
     return len(x) if (sum(x) % len(x) == 0) else len(x) - 1
 
 if __name__ == '__main__':
