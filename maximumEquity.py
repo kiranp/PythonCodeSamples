@@ -45,25 +45,23 @@ def answer1(x):
         x[x.index(min(x))] = x[x.index(min(x))]+1
         x[x.index(max(x))] = x[x.index(max(x))]-1
         minIndex = x.index(min(x))
-    print "Rearranged list: ", x
-    dictOfEquals = {i:x.count(i) for i in x}
-    maxEqualIndex =  max(dictOfEquals, key=dictOfEquals.get)
-    maxEquals = dictOfEquals[maxEqualIndex]
-    print "MaxEquals:", maxEquals
-    return maxEquals
+    #print "Rearranged list: ", x
+    return x
+    #dictOfEquals = {i:x.count(i) for i in x}
+    #maxEqualIndex =  max(dictOfEquals, key=dictOfEquals.get)
+    #maxEquals = dictOfEquals[maxEqualIndex]
+    #print "MaxEquals:", maxEquals
+    #return maxEquals
 
 def answer(x):
-    print sum(x)
-    print len(x)
+    #print sum(x)
+    #print len(x)
     return len(x) if (sum(x) % len(x) == 0) else len(x) - 1
 
 if __name__ == '__main__':
-    #cars = [None] * random.randint(2, 100)
-    #for i in xrange(0, len(cars)):
-    #	cars[i]=random.randint(0,50)
     cars =  [2,2,3,4,5,7,8,9]
     #cars =  [0, 1, 1000000]
 
-    print 'cars= %s' % str(cars)
-    print 'short = %s' % str(answer(cars))
-    print 'long = %s' % str(answer1(cars))
+    print 'Input: cars= %s' % str(cars)
+    print 'Max equals = %s' % str(answer(cars))
+    print "List of max equals" , str(answer1(cars))
